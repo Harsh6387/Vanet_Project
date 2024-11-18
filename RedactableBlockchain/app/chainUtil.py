@@ -45,7 +45,8 @@ def addSimpleBlock(msg: str):
     
     t0 = time()
 
-    msg = binascii.hexlify(bytes(msg, encoding="utf8"))
+    # msg = binascii.hexlify(bytes(msg, encoding="utf8"))
+    msg = binascii.hexlify(bytes("hello world", encoding="utf8"))
 
     w3.eth.send_transaction({"from": w3.eth.accounts[0], "to": w3.eth.accounts[1], "data": msg})
 
